@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
-        <item>@font/bowlby_one</item>
-        <item>@font/goblin_one</item>
+
+
+        <item>@font/fraunces_extrabold</item>
+        <item>@font/lato_light_italic</item>
     </array>
 </resources>
