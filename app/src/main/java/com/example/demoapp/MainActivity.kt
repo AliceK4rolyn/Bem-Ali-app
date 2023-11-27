@@ -27,11 +27,9 @@ class MainActivity: AppCompatActivity() {
 
     }
 
-
     private fun IrParaCadastro(){
 
         val tela_cadastro = Intent(this, Cadastro::class.java)
-
         startActivity(tela_cadastro)
     }
 

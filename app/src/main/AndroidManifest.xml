@@ -13,9 +13,6 @@
         android:theme="@style/Theme.DemoApp"
         tools:targetApi="31">
         <activity
-            android:name=".view.Login"
-            android:exported="false" />
-        <activity
             android:name=".Perfil"
             android:exported="false" />
         <activity

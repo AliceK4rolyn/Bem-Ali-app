@@ -7,41 +7,70 @@ import android.os.Bundle
 import android.view.View
 import com.example.demoapp.databinding.ActivityCadastroBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 
 class Cadastro : AppCompatActivity() {
 
     private lateinit var binding: ActivityCadastroBinding
-
+    //private val auth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCadastroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Tentei mas não deu certo
+
+//        binding.buttonCadastrar2.setOnClickListener {view->
+//
+//            val nome = binding.editNome.text.toString()
+//            val email = binding.editEmail.text.toString()
+//            val senha = binding.editSenha.text.toString()
+//
+//            if(email.isEmpty() || senha.isEmpty()){
+//                val snackbar = Snackbar.make(view, "Preencha todos os campos", Snackbar.LENGTH_SHORT)
+//                snackbar.setBackgroundTint(Color.RED)
+//                snackbar.show()
+//            }else{
+//                auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener { cadastro ->
+//                    if(cadastro.isSuccessful){
+//                        val snackbar = Snackbar.make(view, "Cadastro reallizado com sucesso", Snackbar.LENGTH_SHORT)
+//                        snackbar.setBackgroundTint(Color.BLUE)
+//                        snackbar.show()
+//                    }
+//                }.addOnFailureListener{
+//
+//                }
+//            }
+//        }
+
         binding.buttonCadastrar2.setOnClickListener {
 
-            val usuario = binding.editTextUsuario.text.toString()
-            val senha = binding.editTextSenha.text.toString()
-            val email = binding.editEmail.toString()
+            val usuario = binding.editNome.text.toString()
+            val email = binding.editEmail.text.toString()
+            val senha = binding.editSenha.text.toString()
+
 
             when{
                 usuario.isEmpty() -> {
                     mensagem(it,"Coloque o seu nome de usuário!")
-                }senha.isEmpty() -> {
-                    mensagem(it, "Preencha a senha!")
                 }email.isEmpty() -> {
                     mensagem(it, "Preencha o email")
+                }senha.isEmpty() -> {
+                    mensagem(it, "Preencha a senha!")
                 }senha.length <=5 -> {
                     mensagem(it, "A senha deve ter mais de 5 caracteres")
                 }else -> {
-                    irParaFeedApp(usuario)
+                        irParaFeedApp(usuario)
                 }
             }
         }
-        binding.buttonJaTenhoCadastro.setOnClickListener {
+
+        binding.buttonJaTenhoCadastro.setOnClickListener{
             irParaLogin()
         }
     }
+
 
     private fun mensagem(view: View, mensagem: String){
         val snackbar = Snackbar.make(view, mensagem, Snackbar.LENGTH_SHORT)
@@ -60,5 +89,4 @@ class Cadastro : AppCompatActivity() {
         val temCadastro = Intent(this,Login::class.java)
         startActivity(temCadastro)
     }
-
 }

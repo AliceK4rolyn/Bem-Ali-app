@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Bem Ali</string>
     <string name="nome">Bem Ali</string>
+    <string name="Email">Email</string>
+    <string name="Nome">Nome</string>
+    <string name="Senha">Senha</string>
     <string name="entrar">Entrar</string>
     <string name="cadastro">Cadastrar</string>
     <string name="slogan">Revelando Manaus, bem ali ao seu lado</string>
@@ -11,6 +14,4 @@
     <string name="logOut">Sair</string>
     <string name="note">Notificações</string>
     <string name="post">Adicionar post</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
