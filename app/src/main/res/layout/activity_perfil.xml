@@ -17,16 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_person"/>
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation_menu" />
-
     <EditText
         android:id="@+id/pesquisar"
         style="@style/Pesquisar"
@@ -40,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_add_post"
+        android:id="@+id/buttonAddPost"
         style="@style/Button"
         android:layout_width="201dp"
         android:layout_height="31dp"
@@ -49,13 +39,13 @@
         android:fontFamily="@font/fraunces_extrabold"
         android:text="@string/post"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFavoritos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_notificacoes"
+        android:id="@+id/buttonNotificacoes"
         style="@style/Button"
         android:layout_width="198dp"
         android:layout_height="32dp"
@@ -64,15 +54,49 @@
         android:fontFamily="@font/fraunces_extrabold"
         android:text="@string/note"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFavoritos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_add_post"
+        app:layout_constraintTop_toBottomOf="@id/buttonAddPost"
         app:layout_constraintVertical_bias="0.062" />
 
+
+    <ImageButton
+        android:id="@+id/buttonHome"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFavoritos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_home" />
+
+    <ImageButton
+        android:id="@+id/buttonFavoritos"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPerfil"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonHome"
+        app:srcCompat="@drawable/ic_favorite" />
+
+    <ImageButton
+        android:id="@+id/buttonPerfil"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonFavoritos"
+        app:srcCompat="@drawable/ic_perfil" />
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_sair"
+        android:id="@+id/buttonSair"
         style="@style/Button"
         android:layout_width="94dp"
         android:layout_height="29dp"
@@ -81,10 +105,10 @@
         android:fontFamily="@font/fraunces_extrabold"
         android:text="@string/logOut"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFavoritos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_notificacoes" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonNotificacoes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
