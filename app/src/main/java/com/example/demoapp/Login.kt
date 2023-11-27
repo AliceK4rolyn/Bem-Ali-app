@@ -48,8 +48,8 @@ class Login : AppCompatActivity() {
 
     private fun mensagem(view: View, mensagem: String){
         val snackbar = Snackbar.make(view, mensagem, Snackbar.LENGTH_SHORT)
-        snackbar.setBackgroundTint(Color.parseColor("#FF0000"))
-        snackbar.setTextColor(Color.parseColor("FFFFFF"))
+        snackbar.setBackgroundTint(Color.parseColor("#ff0000"))
+        snackbar.setTextColor(Color.parseColor("#FFFFFFFF"))
         snackbar.show()
     }
 
