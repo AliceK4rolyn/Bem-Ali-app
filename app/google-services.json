@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "77638867753",
+    "project_id": "bem-ali-a1bff",
+    "storage_bucket": "bem-ali-a1bff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77638867753:android:9d5fb7d04c2cc9a8caf538",
+        "android_client_info": {
+          "package_name": "com.example.demoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4NBHxnTet2rBEgFX69CkbfgX7QphnKaY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
