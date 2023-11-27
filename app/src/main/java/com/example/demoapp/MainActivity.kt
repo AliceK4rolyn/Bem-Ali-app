@@ -1,13 +1,43 @@
 package com.example.demoapp
 
-import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.demoapp.databinding.ActivityMainBinding
 
-class MainActivity: Activity() {
+class MainActivity: AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        binding.buttonCadastrar.setOnClickListener{
+
+            IrParaCadastro()
+
+        }
+
+        binding.buttonEntrar.setOnClickListener{
+            IrParaLogin()
+        }
+
+        binding.
+    }
+
+
+    private fun IrParaCadastro(){
+
+        val tela_cadastro = Intent(this, Cadastro::class.java)
+
+        startActivity(tela_cadastro)
+    }
+
+    private fun IrParaLogin(){
+        val tela_login = Intent(this, Login::class.java)
+        startActivity(tela_login)
     }
 }

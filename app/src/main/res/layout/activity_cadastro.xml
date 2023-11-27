@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/Button2"
+        android:id="@+id/button_cadastrar2"
         style="@style/Button"
         android:layout_width="178dp"
         android:layout_height="51dp"
@@ -30,7 +30,6 @@
         android:text="@string/cadastro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -78,17 +77,16 @@
         android:hint="Senha"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/Button3"
+        android:id="@+id/button_ja_tenho_cadastro"
         style="@style/Cad_Log"
         android:layout_width="179dp"
         android:layout_height="23dp"
-        android:layout_marginTop="40dp"
         android:background="@drawable/log_cad_button"
         android:text="Já tenho cadastro"
         android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button_cadastrar2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

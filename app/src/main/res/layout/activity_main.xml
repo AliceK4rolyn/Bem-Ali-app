@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Button2"
+    android:id="@+id/button_notificacoes"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
@@ -35,31 +35,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/Button"
+    <Button
+        android:id="@+id/buttonEntrar"
         style="@style/Button"
         android:layout_width="178dp"
         android:layout_height="51dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/button"
-        android:text="@string/entrar"
+        android:text="Entrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/slogan" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/Button1"
+    <Button
+        android:id="@+id/buttonCadastrar"
         style="@style/Button"
         android:layout_width="178dp"
         android:layout_height="51dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/button"
 
-        android:text="@string/cadastro"
+        android:text="Cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Button" />
-
-
+        app:layout_constraintTop_toBottomOf="@id/buttonEntrar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
