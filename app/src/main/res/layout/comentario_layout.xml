@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageUser"
+        android:layout_width="45dp"
+        android:layout_height="81dp"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@drawable/ic_person2" />
+
+
+
+    <LinearLayout
+        android:id="@+id/Components"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textItem"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/fraunces_extrabold"
+            android:text=" @user"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textValor"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_light_italic"
+            android:text="comentario" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="9dp"
+        android:layout_height="67dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_favorite"
+        tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck" />
+</LinearLayout>
