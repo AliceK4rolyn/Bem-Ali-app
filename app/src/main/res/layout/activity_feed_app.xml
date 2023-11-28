@@ -29,16 +29,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_person" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewItems"
-        android:layout_width="410dp"
-        android:layout_height="380dp"
-        android:layout_marginBottom="88dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/localizacao"
         android:layout_width="wrap_content"
@@ -78,8 +68,6 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonFavoritos"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewItems"
-        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/ic_home" />
 
     <ImageButton
@@ -90,8 +78,6 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonPerfil"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonHome"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewItems"
-        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/ic_favorite" />
 
     <ImageButton
@@ -102,10 +88,72 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonFavoritos"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewItems"
-        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/ic_person2" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="224dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageButton
+            android:id="@+id/imagemLocal"
+            android:layout_width="361dp"
+            android:layout_height="267dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/musa_img"
+            tools:srcCompat="@drawable/musa_img" />
+
+        <TextView
+            android:id="@+id/nomeLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/nomeLocal"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/numViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:text="@string/numViews"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+
+            <ImageView
+                android:id="@+id/iconViews"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="240dp"
+                android:layout_weight="1"
+                tools:srcCompat="@drawable/ic_view" />
+
+            <ImageButton
+                android:id="@+id/iconFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@android:drawable/btn_star"
+                tools:src="@drawable/btn_favorite" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

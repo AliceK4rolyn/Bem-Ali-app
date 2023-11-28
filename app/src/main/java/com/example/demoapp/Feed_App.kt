@@ -14,6 +14,10 @@ class Feed_App : AppCompatActivity() {
         binding = ActivityFeedAppBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        binding.imagemLocal.setOnClickListener{
+            irParaLocal()
+        }
         binding.buttonHome.setOnClickListener {
             irParaInicio()
         }
@@ -26,6 +30,11 @@ class Feed_App : AppCompatActivity() {
             irParaPerfil()
         }
 
+    }
+
+    private fun irParaLocal(){
+        val informacoesLocal = Intent(this,ViewInformacoes::class.java)
+        startActivity(informacoesLocal)
     }
 
     private fun irParaInicio(){
