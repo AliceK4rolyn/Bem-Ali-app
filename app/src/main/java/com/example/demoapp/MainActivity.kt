@@ -16,7 +16,6 @@ class MainActivity: AppCompatActivity() {
 
 
         binding.buttonCadastrar.setOnClickListener{
-
             IrParaCadastro()
 
         }
