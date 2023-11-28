@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.demoapp.databinding.ActivityCadastroBinding
 import com.example.demoapp.databinding.ActivityPerfilBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class Perfil : AppCompatActivity() {
 
@@ -15,6 +16,7 @@ class Perfil : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonSair.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
             irParaMain()
         }
 
