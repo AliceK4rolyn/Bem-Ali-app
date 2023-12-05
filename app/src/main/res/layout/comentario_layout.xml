@@ -51,11 +51,11 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="9dp"
-        android:layout_height="67dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
         android:layout_weight="1"
         android:background="@android:color/transparent"
-        android:scaleType="centerInside"
+        android:scaleType="fitCenter"
         android:src="@drawable/ic_favorite"
         tools:ignore="RedundantDescriptionCheck,TouchTargetSizeCheck" />
 </LinearLayout>

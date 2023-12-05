@@ -13,11 +13,9 @@
         android:id="@+id/view"
         style="@style/Box"
         android:layout_width="413dp"
-        android:layout_height="573dp"
-
+        android:layout_height="650dp"
         android:layout_marginTop="188dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,11 +46,14 @@
     <EditText
         style="@style/Edit_text"
         android:id="@+id/editNome"
-        android:drawableRight="@drawable/ic_user"
+        android:drawableRight="@drawable/ic_person2"
         android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lato_light_italic"
+        android:textColorHint="@color/black"
         android:hint="Nome"
         />
 
@@ -64,7 +65,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editNome"
-        android:hint="Email"/>
+        android:hint="Email"
+        android:fontFamily="@font/lato_light_italic"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:drawableRight="@drawable/ic_email"/>
 
     <EditText
         android:id="@+id/editSenha"
@@ -74,7 +79,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editEmail"
         android:inputType="textPassword"
-        android:hint="Senha"/>
+        android:fontFamily="@font/lato_light_italic"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:hint="Senha"
+        android:drawableRight="@drawable/ic_view"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_ja_tenho_cadastro"

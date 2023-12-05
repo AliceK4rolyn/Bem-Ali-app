@@ -35,27 +35,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonEntrar"
         style="@style/Button"
         android:layout_width="178dp"
         android:layout_height="51dp"
         android:layout_marginTop="60dp"
-        android:background="@drawable/button"
-        android:text="Entrar"
+        android:text="@string/entrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/slogan" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonCadastrar"
         style="@style/Button"
         android:layout_width="178dp"
         android:layout_height="51dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/button"
-
-        android:text="Cadastro"
+        android:text="@string/cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonEntrar" />
