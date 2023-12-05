@@ -50,7 +50,6 @@ class Cadastro : AppCompatActivity() {
                         is FirebaseAuthWeakPasswordException -> "Digite uma senha com mais de 5 caracteres!"
                         is FirebaseAuthInvalidCredentialsException -> "Digite um email válido!"
                         is FirebaseAuthUserCollisionException -> "Esta conta já foi cadastrada!"
-                        is FirebaseNetworkException -> "Sem conexão com a internet!"
                         else -> "Erro ao cadastrar usuário"
                     }
                     val snackbar = Snackbar.make(view, mensagemErro, Snackbar.LENGTH_SHORT)
