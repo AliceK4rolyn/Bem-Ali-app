@@ -103,7 +103,7 @@
         android:background="@drawable/button"
         android:drawableRight="@drawable/ic_out"
         android:fontFamily="@font/fraunces_extrabold"
-        android:text="@string/logOut"
+        android:text="LogOut"
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonFavoritos"
         app:layout_constraintEnd_toEndOf="parent"

@@ -42,4 +42,5 @@ class Favoritos : AppCompatActivity() {
         val irPerfil = Intent(this, Perfil::class.java)
         startActivity(irPerfil)
     }
+
 }

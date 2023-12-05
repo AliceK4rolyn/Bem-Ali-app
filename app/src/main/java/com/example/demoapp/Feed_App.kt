@@ -51,5 +51,4 @@ class Feed_App : AppCompatActivity() {
         val irPerfil = Intent(this, Perfil::class.java)
         startActivity(irPerfil)
     }
-
 }

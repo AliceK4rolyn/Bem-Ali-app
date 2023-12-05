@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.demoapp.databinding.ActivityViewInformacoesBinding
 
 class ViewInformacoes : AppCompatActivity() {
+
     private lateinit var binding: ActivityViewInformacoesBinding
+
     private val viewModel: CommentViewModel by viewModels {
         CommentsViewModelFactory(applicationContext)
     }
@@ -21,12 +23,12 @@ class ViewInformacoes : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityViewInformacoesBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         val recyclerView = binding.recyclerView
         recyclerView.adapter = commentAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val dados = intent.extras
-
 
         if (dados != null) {
             val comment = dados.getString("comment")
@@ -52,6 +54,7 @@ class ViewInformacoes : AppCompatActivity() {
             }
             false
         })
+
         binding.buttonHome.setOnClickListener {
             irParaInicio()
         }
