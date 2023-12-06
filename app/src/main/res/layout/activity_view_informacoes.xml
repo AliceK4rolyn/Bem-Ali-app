@@ -12,10 +12,10 @@
         android:layout_width="408dp"
         android:layout_height="333dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/musa_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/musa_img"
         tools:srcCompat="@drawable/musa_img" />
 
     <TextView
@@ -93,8 +93,7 @@
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
         android:id="@+id/textAdicionar"
@@ -102,7 +101,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
-        android:drawableRight="@drawable/ic_add2"
         android:fontFamily="@font/lato_light_italic"
         android:hint="Adicionar comentário"
         android:textColor="@color/black"
@@ -116,9 +114,9 @@
         android:id="@+id/buttonHome"
         android:layout_width="150dp"
         android:layout_height="60dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonFavoritos"
-        android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_home" />
 
@@ -126,9 +124,9 @@
         android:id="@+id/buttonFavoritos"
         android:layout_width="150dp"
         android:layout_height="60dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonPerfil"
-        android:background="@color/white"
         app:layout_constraintStart_toEndOf="@+id/buttonHome"
         app:srcCompat="@drawable/ic_favorite" />
 
@@ -136,10 +134,23 @@
         android:id="@+id/buttonPerfil"
         android:layout_width="150dp"
         android:layout_height="60dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/white"
         app:layout_constraintStart_toEndOf="@+id/buttonFavoritos"
         app:srcCompat="@drawable/ic_person2" />
+
+    <ImageView
+        android:id="@+id/buttonAddCom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textAdicionar"
+        app:srcCompat="@drawable/ic_add2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

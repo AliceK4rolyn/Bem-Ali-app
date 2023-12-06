@@ -23,20 +23,10 @@ class ViewInformacoes : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityViewInformacoesBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         val recyclerView = binding.recyclerView
         recyclerView.adapter = commentAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val dados = intent.extras
-
-        if (dados != null) {
-            val comment = dados.getString("comment")
-
-            viewModel.addItem(
-                "$comment",
-            )
-        }
 
         viewModel.commentLiveData.observe(this) { items ->
             commentAdapter.updateComment(items)
@@ -47,14 +37,11 @@ class ViewInformacoes : AppCompatActivity() {
             startActivity(i)
         }
 
-        binding.textAdicionar.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
-            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-                salvar(binding.textAdicionar.text.toString())
-                return@OnKeyListener true
-            }
-            false
-        })
+        binding.buttonAddCom.setOnClickListener {
+            salvar(binding.textAdicionar.text.toString())
+            binding.textAdicionar.text.clear()
 
+        }
         binding.buttonHome.setOnClickListener {
             irParaInicio()
         }
@@ -85,9 +72,7 @@ class ViewInformacoes : AppCompatActivity() {
     }
 
     private fun salvar(comment: String) {
-        val telaInfo = Intent(this, ViewInformacoes::class.java)
-        telaInfo.putExtra("comment", comment)
-        startActivity(telaInfo)
+        viewModel.addItem(comment)
     }
 }
 
